@@ -40,11 +40,11 @@
 8. [Rule building](#8)
 9. [Contest score](#9)
 
-![](./resource/contest.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/contest.png)
 
 # Structure
 
-![](./resource/structure.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/structure.png)
 
 # Contest analysis
 <a id="1"/>
@@ -72,25 +72,25 @@
 ## Data profile
 <a id="3.1"/>
 
-![](./resource/profile.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/profile.png)
 
 <p>We can see that it contains a lot of sparse data and and missing values.</p>
 <p>Let's look at the table introducing all features.(Without new features)
 
-![](./resource/features.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/features.png)
 
 ## Discrete features
 <a id="3.2"/>
 
 ### 企业类型/登记机关/企业状态/行业代码/行业门类/企业类别/管辖机关/纳税人状态代码/登记注册类型代码
 
-![](./resource/discrete_1_scatter.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_1_scatter.png)
 
-![](./resource/discrete_1_hist.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_1_hist.png)
 
-![](./resource/discrete_1_nan.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_1_nan.png)
 
-![](./resource/discrete_1_bi-sort.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_1_bi-sort.png)
 
 There are a few missing values and the most of them show partial distribution and unimodal distribution.
 
@@ -98,13 +98,13 @@ Obviously, it has no strong correlation with time features and label.
 
 ### 诉讼总数量/资本变更次数
 
-![](./resource/discrete_2_scatter.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_2_scatter.png)
 
-![](./resource/discrete_2_hist.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_2_hist.png)
 
-![](./resource/discrete_2_nan.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_2_nan.png)
 
-![](./resource/discrete_2_bi-sort.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/discrete_2_bi-sort.png)
 
 They has many missing values, and after bi-sorted, they may has strong correlation with label(Uncertain thanks to too many missing values).
 
@@ -113,13 +113,13 @@ They has many missing values, and after bi-sorted, they may has strong correlati
 
 ### 投资总额/注册资本/增值税/企业所得税/印花税/教育费/城建税/最新参保人数/年度参保总额
 
-![](./resource/continuous_1_scatter.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/continuous_1_scatter.png)
 
-![](./resource/continuous_1_hist.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/continuous_1_hist.png)
 
-![](./resource/continuous_1_nan.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/continuous_1_nan.png)
 
-![](./resource/continuous_1_bi-sort.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/continuous_1_bi-sort.png)
 
 Every feature has a few outliers and is relatively centralized.
 
@@ -127,7 +127,7 @@ Then we can find they hava some special range for false label easily after bi-so
 
 ### 递延收益_年初数~在建工程_年末数/资本变更
 
-![](./resource/continuous_2_desc.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/continuous_2_desc.png)
 
 They are so bad features because too many missing values.
 
@@ -135,7 +135,7 @@ We can't find a few regularities. Thus leave them to the model.
 
 ### 案件数/诉讼数量/处罚程度/处罚类型/罚款金额
 
-![](./resource/continuous_3_desc.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/continuous_3_desc.png)
 
 So sparsely features, they are as unobservable as above.
 
@@ -146,11 +146,11 @@ Leave them to the model.
 
 ### Time features
 
-![](./resource/other_1_nan.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/other_1_nan.png)
 
-![](./resource/other_1_bi-sort-1.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/other_1_bi-sort-1.png)
 
-![](./resource/other_1_bi-sort-2.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/other_1_bi-sort-2.png)
 
 Because the dtype is object and the data is string, we need to convert time to seconds.
 
@@ -158,11 +158,11 @@ After bi-sorted, we can know that it has no strong correlation with time feature
 
 ### 邮政编码
 
-![](./resource/other_2_nan.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/other_2_nan.png)
 
-![](./resource/other_2_bi-sort-1.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/other_2_bi-sort-1.png)
 
-![](./resource/other_2_bi-sort-2.png)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/other_2_bi-sort-2.png)
 
 this feature contains some invalid values like string and special values like Hong Kong, Taiwan.
 
@@ -321,8 +321,8 @@ The decision tree is a very ideal divider.
 
 - Merge the old features and new features.
 
-![](./resource/woe.jpg)
-![](./resource/iv.jpg)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/woe.jpg)
+![](https://github.com/3017218062/corporate-dishonesty-prediction/blob/master/resource/iv.jpg)
 
 As following:
 ```
